@@ -1,0 +1,16 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<% if @users && @users.any? %>
+  <%= render :partial => "filter_users" %>
+
+  <fieldset class="trombi" id="trombinoscope_users">
+    <legend></legend>
+    <%= render :partial => 'users' %>
+  </fieldset>
+<%else%>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<% html_title(l(:label_trombinoscope)) -%>

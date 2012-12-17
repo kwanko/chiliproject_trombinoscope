@@ -1,0 +1,26 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<% url = @project.nil? ? { :controller => 'trombinoscope', :action => 'search_trombinoscope_users'} : { :controller => 'trombinoscope', :action => 'search_trombinoscope_users', :project_id => @project } %>
+ <fieldset class="trombi-search-user">
+   <legend></legend>
+    <div class="trombi-search-user-left">
+      <%= label_tag "trombinoscope_filter_users", l(:label_search_user) %><%= text_field_tag :search_user, nil, :class => "trombi-search-user-field", :size => 50 %>
+    </div>
+    <div class="trombi-search-user-right">
+     <p class="inline">
+       <label class="bold block"> <%= radio_button_tag(:filter_users, 1, true, :onclick => "filterTrombi(this.value, 'trombinoscope_users', '#{url_for(url)}');") + l(:label_all).capitalize %></label>
+       <label class="bold block"> <%= radio_button_tag(:filter_users, 2, false, :onclick => "filterTrombi(this.value, 'trombinoscope_users', '#{url_for(url)}');") + l( :label_with_picture) %></label>
+       <label class="bold block"> <%= radio_button_tag(:filter_users, 3, false, :onclick => "filterTrombi(this.value, 'trombinoscope_users', '#{url_for(url)}');") + l(:label_without_picture) %></label>
+     </p>
+   </div>
+    <%= observe_field(:search_user,
+     :frequency => 0.5,
+     :update => :trombinoscope_users,
+     :url => url,
+     :with => "'search_user=' + $('search_user').getValue() + '&filter_users=' + getfilter_users_value()")
+      %>
+  </fieldset>
+
+

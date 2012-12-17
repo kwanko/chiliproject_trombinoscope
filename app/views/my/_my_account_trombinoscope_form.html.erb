@@ -1,0 +1,18 @@
+<%
+# Trombinoscope plugin for Chiliproject
+# Copyright (C) 2012 Arnauld NYAKU
+%>
+<%= javascript_tag "jQuery('#my_account_form').attr('enctype','multipart/form-data');" %>
+</div>
+<h3><%=l(:label_trombinoscope) + " : " + l(:label_your_photo)%></h3>
+
+<div id="trombi-secondary-picture" class='box tabular'>
+  <% if user_picture_exist?(User.current, "S") %>
+  <p class="">
+  <%= display_secondary_picture_of(User.current)  %><br/>
+  <%= link_to(l(:button_picture_delete), {:controller => "trombinoscope_pictures", :action => "delete", :id => User.current.id, :kind => "S", :from => "my"}, :confirm => l(:text_confirm_delete_picture, :user => User.current.name),:class => 'icon icon-del', :title => l(:button_picture_delete))%>
+  </p>
+  <%end%>
+  <p> <%= label_tag l(:label_choose_photo) %>
+  <%= file_field :pref, :picture  %><em class="required"><%= l :text_choose_jpg_file %></em>
+  </p>

@@ -1,0 +1,13 @@
+<%
+# Questionnaires plugin for Chiliproject
+# Copyright (C) 2008-2009  Arnauld NYAKU
+%>
+
+<%if User.current.allowed_to?(:manage_trombinoscope, nil, :global => true) %>
+
+<div class="clearfix"></div>
+<h3><%= l :label_trombinoscope %></h3>
+  <%= link_to l :label_manage_trombinoscope, :controller => 'trombinoscope', :with_picture => 'n' %>
+
+<%end%>
+

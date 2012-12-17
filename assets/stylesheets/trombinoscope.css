@@ -1,0 +1,135 @@
+/* 
+    Document   : trombinoscope
+    Created on : 3 mai 2012, 11:47:12
+    Author     : arnauld.nyaku
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.trombi {
+
+}
+.trombi-user {
+    background: url("../images/trombi-fond.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 183px;
+    position: relative;
+    width: 137px;
+    margin: 5px;
+}
+
+.trombi-user-picture {
+    display: block;
+    height: 95px;
+    margin: 0 auto;
+    position: relative;
+    top: 7px;
+    width: 110px;
+}
+
+h6.trombi-user-name {
+    text-align: left;
+    font-weight: bold;
+    font-size: 11px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.trombi-search-user {
+margin: 0 0 10px 0
+}
+
+.trombi-search-user-field {
+    margin: 5px 10px
+}
+
+fieldset div.trombi-search-user-left { float: left; width: 55%;}
+
+fieldset div.trombi-search-user-right { float: left; width: 44%;}
+
+.bold {font-weight: bold;}
+fieldset div.trombi-search-user-right .block {display: block; margin-right: 10px;}
+
+fieldset div.trombi-search-user-right p.inline {
+    display: -moz-inline-box;
+    padding-top: 10px;
+}
+
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: #FECA40; }
+#selectable .ui-selected { background:#E6E5E5;}
+#selectable { list-style-type: none; margin: 0; padding: 0; }
+#selectable li {
+    background: url("../images/trombi-fond.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 183px;
+    position: relative;
+    width: 137px;
+    margin: 5px;
+    border: none;
+    list-style: none;
+}
+.icon-view {background-image: url(../images/vcard.png);}
+
+
+
+/***** Tooltips ******/
+
+.state_tooltip {position:relative;z-index:25; color:#000;}
+
+.state_tooltip span.state_tip{
+    background-color:#fff;
+    text-align:left;
+    border:1px solid #555;
+    display:block;
+    position:absolute;
+    color:#505050;
+    top:3px; left:105px; width:23px;
+    z-index: 25;
+}
+
+#selectable .state_tooltip .state_tip a {
+    font-size: 10px;
+    height: 15px;
+    margin: 2px 0;
+    width: auto;
+    display: block;
+}
+
+#selectable .state_tooltip .state_tip a:hover {text-decoration: none;}
+
+#selectable .tooltip{position:relative;z-index:24;}
+#selectable .tooltip:hover{z-index:26;color:#000;}
+#selectable .tooltip span.tip{display: none; text-align:left; z-index: 28;}
+
+#selectable div.tooltip:hover span.tip{
+display:block;
+position:absolute;
+top:12px; left:24px; width:auto;
+border:none;
+background-color:#fff;
+padding: 4px;
+font-size: 0.8em;
+color:#505050;
+}
+
+div#trombi-secondary-picture p.show-secondary-picture{
+    padding: 3px;
+    border:1px solid #555;
+    text-align: center;
+    margin: 0 300px;
+
+}
+
+.trombi-user-secondary-picture {
+    height: 95px;
+    margin: 0 auto;
+    position: relative;
+    width: 110px;
+}

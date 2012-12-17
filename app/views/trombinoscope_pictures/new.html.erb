@@ -1,0 +1,5 @@
+<span id="error_span" class="required"></span>
+<% form_for(:trombinoscope_picture, @trombinoscope_picture, :url => {:controller => "trombinoscope_pictures", :action => "create", :id => @user.id, :kind => @kind}, :html => {:multipart => true, :id => "set_picture_form"}) do |f| %>
+<p><%= l(:label_choose_picture_for) + content_tag(:strong, @user.name)  %><%= f.file_field :picture %><em class="required"><%= l :text_choose_jpg_file %></em></p>
+<p style="text-align: center; padding-top: 10px;"><%= submit_tag l(:button_validate_picture), :onclick => "valid_form('#{l :text_picture_not_valid}');" %></p>
+<% end %>

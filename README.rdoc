@@ -1,0 +1,55 @@
+=== Chiliproject Trombinoscope plugin 0.0.1
+
+This is a Trombinoscope plugin for Chiliproject.
+ONLY compatible with Chiliproject 3.X NOT compatible with Chiliproject 2.X
+
+
+== Getting the plugin
+
+The newest version is always at {GitHub}[http://github.com/kwanko/chiliproject_trombinoscope].
+
+=== Feature
+
+1. Chliproject administrator can let another user manage trombinoscope.
+2. Display all active users for all projects or for a current project.
+3. Allowed users to add secondary picture.
+4. Trombinoscope picture replace user's avatar when the option "display avatar" is enabled.
+
+
+=== Note
+
+All photos are automatically resized to H = 110 and W = 95. For an optimal view you can resize the photos before uploading.
+
+=== Plugin installation
+
+1. Copy the plugin directory(chiliproject_trombinoscope) into the vendor/plugins or vendor/chiliproject_plugins directory
+   NOTE: The plugin directory must be chiliproject_trombinoscope!
+
+2. Migrate plugin:
+   rake db:migrate:plugin NAME=chiliproject_trombinoscope RAILS_ENV=production
+
+3. Start Chiliproject
+
+Installed plugins are listed on 'Admin -> Plugins' screen.
+
+4. Display trombinoscope
+   More > Trombinoscope : For all users
+   SideBarMenu > Trombinoscope : For project's users
+
+=== Changelog
+
+0.0.1 -> First commit.
+
+=== Credits
+
+All the Chiliproject core.
+To Borjam from dagi3d for paperclip-facecrop gem
+
+
+=== Contact info
+
+Email    -> arnauld.nyaku@gmail.com
+
+=== Licence
+
+The code is released under the GPLv2: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html

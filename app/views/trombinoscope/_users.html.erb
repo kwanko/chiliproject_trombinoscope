@@ -1,0 +1,13 @@
+<%  if @users.any? %>
+ <ol id="selectable">
+  <% @users.sort_by(&:name).each do |user| %>
+    <li class="">
+        <%= display_principal_picture_of user %>
+    </li>
+    <%end%>
+ </ol>
+<% else %>
+  <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<%= javascript_tag("ajaxBox();") %>

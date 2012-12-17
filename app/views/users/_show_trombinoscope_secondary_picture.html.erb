@@ -1,0 +1,15 @@
+<%
+# Trombinoscope plugin for Chiliproject
+# Copyright (C) 2012  Arnauld NYAKU
+%>
+
+<h3><%= l(:label_trombinoscope) + " : " + l(:label_your_photo) %></h3>
+
+<div class="wiki">
+  <% if user_picture_exist?(@user, "S")  %>
+  <p class="">
+   <%= display_secondary_picture_of(@user) %> <br/>
+   <%= link_to(l(:button_picture_delete), {:controller => "trombinoscope_pictures", :action => "delete", :id => @user.id, :kind => "S", :from => "user"}, :confirm => l(:text_confirm_delete_picture, :user => @user.name),:class => 'icon icon-del', :title => l(:button_picture_delete)) if User.current.allowed_to?(:manage_trombinoscope, nil, :global => true) %>
+  </p>
+  <%end%>
+</div>

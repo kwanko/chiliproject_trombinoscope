@@ -1,0 +1,18 @@
+fr:
+  label_trombinoscope: Trombinoscope
+  label_search_user: Rechercher un utilisateur
+  label_with_picture: Avec photos
+  label_without_picture: Sans photos
+  label_choose_picture_for: "Choisir une photo pour "
+  label_choose_photo: "Choisir une photo "
+  label_your_photo: Photo envoyée par l'utilisateur
+  
+  button_picture_add: Ajouter une photo
+  button_picture_edit: Modifier la photo
+  button_validate_picture: Valider
+  button_view_profile: Voir profil
+  button_picture_delete: Supprimer la photo
+
+  text_picture_not_valid: n\'est pas valide
+  text_choose_jpg_file: Chosir un fichier *.jpg
+  text_confirm_delete_picture: "Attention! vous allez supprimer la photo de %{user}.\nEtes-vous sûr de vouloir continuer?"
